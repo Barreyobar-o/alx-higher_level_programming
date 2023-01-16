@@ -9,8 +9,8 @@ In this project, we review everything about Python:
 * Class
 * Private attribute
 * Getter/Setter
-* Class methods
-* Static methods
+* Class method
+* Static method
 * Inheritance
 * Unittest
 * Read/Write file
