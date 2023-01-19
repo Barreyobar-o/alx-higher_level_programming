@@ -370,3 +370,22 @@ class TestBase(unittest.TestCase):
 
     def test_20_4(self):
         """Test class method load_from_file_csv with missing files."""
+
+        os.remove("Rectangle.csv")
+        os.remove("Square.csv")
+        os.remove("Base.csv")
+        list_rectangles_output = Rectangle.load_from_file_csv()
+        self.assertEqual(list_rectangles_output, [])
+        list_squares_output = Square.load_from_file_csv()
+        self.assertEqual(list_squares_output, [])
+
+    def test_20_5(self):
+        """Test class method load_from_file_csv with wrong args."""
+
+        s = "load_from_file_csv() takes 1 positional argument but 2 were given"
+        with self.assertRaises(TypeError) as x:
+            list_rectangles_output = Rectangle.load_from_file_csv("Hello")
+        self.assertEqual(s, str(x.exception))
+
+if __name__ == '__main__':
+    unittest.main()
