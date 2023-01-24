@@ -1,4 +1,4 @@
-# alx-higher_level_programming
+# alx-higher_level_programmings
 
 ## Table of contents
 Directories | Description
